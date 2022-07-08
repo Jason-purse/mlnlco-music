@@ -1,0 +1,48 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'org.gradle.kotlin.kotlin-dsl' version '2.1.7'
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+defaultTasks "build"
+
+repositories {
+    mavenLocal()
+    gradlePluginPortal()
+    mavenCentral()
+    maven {
+        url 'https://maven.aliyun.com/repository/public/'
+    }
+    maven { url "https://repo.spring.io/release" }
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation "org.jetbrains.kotlin:kotlin-gradle-plugin"
+    implementation "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$jupiterVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jupiterVersion"
+}
+
+
+
+test {
+    useJUnitPlatform()
+}
+
+gradlePlugin {
+    plugins {
+        TestConventions {
+            id = 'club.smileboy.mlnlco.test.convention'
+            implementationClass = 'club.smileboy.app.mlnlco.conventions.TestConventions'
+        }
+
+        KotlinConventions {
+            id = 'club.smileboy.mlnlco.kotlin.convention'
+            implementationClass = 'club.smileboy.app.mlnlco.conventions.KotlinConventions'
+        }
+    }
+}

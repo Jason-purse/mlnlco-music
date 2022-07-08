@@ -1,0 +1,44 @@
+plugins {
+    // 默认子模块也可以拥有这些配置
+    id "org.springframework.boot" version "$springBootVersion"
+    id "io.spring.dependency-management"  version "1.0.11.RELEASE"
+    id 'org.jetbrains.kotlin.jvm'
+}
+// 设置每一个仓库的版本
+repositories {
+    mavenLocal()
+    maven {
+        url 'https://maven.aliyun.com/repository/public/'
+    }
+    mavenCentral()
+}
+
+project.subprojects {
+    // java 编译
+    afterEvaluate {
+        tasks.named("compileJava",JavaCompile.class) {
+            options.encoding = 'utf-8'
+            sourceCompatibility = jvmVersion
+            targetCompatibility = jvmVersion
+        }
+    }
+
+
+    // 设置整个项目的版本 ...
+    version = version
+    group = group
+    // 设置每一个仓库的版本
+    repositories {
+        mavenLocal()
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        mavenCentral()
+    }
+
+    configurations.all {
+        // 将所有的依赖进行配置 ...
+        // 这是groovy 的语法,方法可以去掉函数()
+        resolutionStrategy.cacheChangingModulesFor 0, "minutes"
+    }
+}
