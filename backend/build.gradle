@@ -1,8 +1,13 @@
 plugins {
     // 默认子模块也可以拥有这些配置
-    id "org.springframework.boot" version "$springBootVersion"
-    id "io.spring.dependency-management"  version "1.0.11.RELEASE"
-    id 'org.jetbrains.kotlin.jvm'
+    id "org.springframework.boot" apply false
+    id "io.spring.dependency-management"  apply false
+    id 'org.jetbrains.kotlin.jvm' apply false
+    id 'org.jetbrains.kotlin.plugin.allopen' apply false
+    id 'org.jetbrains.kotlin.plugin.spring' apply false
+    id 'org.jetbrains.kotlin.plugin.jpa' apply false
+    id 'org.jetbrains.kotlin.plugin.noarg' apply false
+    id 'org.jetbrains.kotlin.plugin.lombok' apply false
 }
 // 设置每一个仓库的版本
 repositories {

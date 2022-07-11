@@ -21,12 +21,12 @@ repositories {
 
 dependencies {
     implementation gradleApi()
+    implementation "io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE"
     implementation "org.jetbrains.kotlin:kotlin-gradle-plugin"
     implementation "org.jetbrains.kotlin:kotlin-compiler-embeddable"
     testImplementation "org.junit.jupiter:junit-jupiter-api:$jupiterVersion"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jupiterVersion"
 }
-
 
 
 test {
@@ -43,6 +43,11 @@ gradlePlugin {
         KotlinConventions {
             id = 'club.smileboy.mlnlco.kotlin.convention'
             implementationClass = 'club.smileboy.app.mlnlco.conventions.KotlinConventions'
+        }
+
+        projectConventions {
+            id = 'club.smileboy.mlnlco.project.convention'
+            implementationClass = 'club.smileboy.app.mlnlco.conventions.ProjectConventions'
         }
     }
 }

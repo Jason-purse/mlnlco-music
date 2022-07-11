@@ -1,13 +1,17 @@
 plugins {
-    id 'java'
+    id 'java-library'
     id 'org.jetbrains.kotlin.jvm'
     id 'club.smileboy.mlnlco.test.convention'
+    id 'club.smileboy.mlnlco.project.convention'
 }
 
 
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }

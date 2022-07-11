@@ -1,14 +1,53 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm'
     id 'java'
+    id 'org.jetbrains.kotlin.jvm'
     id 'club.smileboy.mlnlco.test.convention'
+    id 'club.smileboy.mlnlco.project.convention'
 }
 
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin"
+    compileOnly "org.projectlombok:lombok"
+    annotationProcessor "org.projectlombok:lombok"
+    testCompileOnly "org.projectlombok:lombok"
+    testAnnotationProcessor "org.projectlombok:lombok"
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-validation"
+//    implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation "org.springframework.boot:spring-boot-starter-jdbc"
+    implementation "mysql:mysql-connector-java"
+    implementation("com.alibaba:druid-spring-boot-starter:1.2.8")
+    implementation('com.baomidou:mybatis-plus-boot-starter:3.4.3.4')
+    compileOnly 'javax.servlet:javax.servlet-api'
+
+//    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+//    compileOnly("com.querydsl:querydsl-core")
+//    compileOnly("com.querydsl:querydsl-jpa")
+//    compileOnly "com.querydsl:querydsl-apt"
+//    testImplementation "com.querydsl:querydsl-core"
+//    testImplementation "com.querydsl:querydsl-apt"
+//    testImplementation "com.querydsl:querydsl-jpa"
+    testImplementation('javax.annotation:javax.annotation-api')
+
+//    annotationProcessor('com.querydsl:querydsl-apt')
+    annotationProcessor('org.springframework.boot:spring-boot-configuration-processor')
+//    annotationProcessor('javax.annotation:javax.annotation-api')
+
+//    testAnnotationProcessor('com.querydsl:querydsl-apt')
+//    testAnnotationProcessor('javax.annotation:javax.annotation-api')
+
+    implementation "org.springframework.session:spring-session-data-redis"
+    implementation "io.springfox:springfox-swagger2"
+    implementation "io.springfox:springfox-swagger-ui"
+
+    implementation(project(":commons"))
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
-    implementation "org.springframework.boot:spring-web"
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
