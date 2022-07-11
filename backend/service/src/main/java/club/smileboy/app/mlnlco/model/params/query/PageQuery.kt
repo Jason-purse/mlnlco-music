@@ -24,7 +24,7 @@ interface PageQuery {
      * @param pageable 分页参数
      * @return pageParam 分页查询参数
      */
-    open fun withPageable(pageable: Pageable): PageQuery {
+    fun withPageable(pageable: Pageable): PageQuery {
         return pageable.withPageQuery()
     }
 

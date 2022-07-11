@@ -21,6 +21,16 @@ class GenericDataDictDataType {
          * sheet type
          */
         const val SHEET_TYPE = "sheet_type"
+
+        /**
+         * 所有其他类型的 总类型(根节点标识)
+         */
+        const val SYSTEM_TYPE = "system_type"
+
+        /**
+         * 它仅仅指示做一个标识,没有实际应用到字典中
+         */
+        const val SYSTEM_CHILD_TYPE = "system_child_type"
     }
 }
 

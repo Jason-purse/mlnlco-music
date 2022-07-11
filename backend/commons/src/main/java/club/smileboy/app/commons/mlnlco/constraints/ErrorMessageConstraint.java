@@ -59,6 +59,16 @@ public enum ErrorMessageConstraint {
      * 数据不合法之 数据为空
      */
     DATA_VIOLATION_EMPTY("data.violation.empty"),
+
+    /**
+     * 数据不存在 ...
+     */
+    DATA_EMPTY("data.empty"),
+
+    /**
+     * 数据不合法之数据模板为空
+     */
+    DATA_VIOLATION_TEMPLATE_EMPTY("data.violation.template.empty",true),
     /**
      * 歌单
      */
@@ -66,7 +76,16 @@ public enum ErrorMessageConstraint {
     /**
      * 收藏(其实也叫歌单)
      */
-    SHEET_COLLECTION("sheet.collection")
+    SHEET_COLLECTION("sheet.collection"),
+
+    /**
+     * 名称
+     */
+    TITLE("title"),
+    /**
+     * 字典
+     */
+    DICT("dict")
     ;
     private final static String BASE_NAME = "mlnlco_system_error_message";
     private final static Map<Locale, ResourceBundle> resourceBundleMapCache;
