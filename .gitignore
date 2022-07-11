@@ -27,3 +27,6 @@ target
 node_modules
 .gradle
 build
+package-lock.json
+yarn.lock
+*.log
