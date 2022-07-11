@@ -11,7 +11,9 @@ import org.springframework.context.annotation.Configuration;
  **/
 @Configuration
 public class MlnlcoAutoConfiguration {
-
+    /**
+     * 增加一个Interceptor 拦截器
+     */
     @Bean
     public RequestUtil.LocaleInterceptor localeInterceptor() {
         return new RequestUtil.LocaleInterceptor();
