@@ -1,6 +1,0 @@
-class MlnlCoMusicApplication {
-}
-
-fun main() {
-
-}

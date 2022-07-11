@@ -1,11 +1,17 @@
 pluginManagement {
+    plugins {
+        // 默认子模块也可以拥有这些配置
+        id "org.springframework.boot" version "$springBootVersion"
+        id "io.spring.dependency-management"  version '1.0.11.RELEASE'
+        id 'org.jetbrains.kotlin.jvm'
+    }
     repositories {
         gradlePluginPortal()
         mavenCentral()
     }
     resolutionStrategy {
         eachPlugin {
-            if(requested.id.id == 'org.jetbrains.kotlin.jvm') {
+            if(requested.id.id.startsWith('org.jetbrains.kotlin')) {
                 // kotlin
                 useVersion(kotlinVersion)
             }

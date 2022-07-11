@@ -1,0 +1,1 @@
+E:\StudyWorkSpace\mlnlco-music\backend\commons\build\classes\java\main\club\smileboy\app\commons\mlnlco\annotations\QueryType.class
