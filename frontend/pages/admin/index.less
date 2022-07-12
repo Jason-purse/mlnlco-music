@@ -1,0 +1,52 @@
+@import url('../../styles/commons.less');
+.adminLayout {
+  .sider-bar {
+    width: 300px;
+    .logo {
+      display: flex;
+      height: 100px;
+      line-height: 100px;
+      color: #2984FF;
+      .content {
+        font: normal 800 20px 宋体;
+        line-height: 100px;
+        flex-grow: 1;
+        color: #101010;
+        text-align: center;
+      }
+      .triggerContainer {
+        margin-left: auto;
+        font-size: 20px;
+      }
+
+      .triggerContainer-center {
+        margin-left: 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      //触发折叠的触发器
+      .trigger {
+        background-color: #f2f2f2;
+        border-left: 5px;
+        border-top: 5px;
+        border-bottom: 5px;
+        padding: 3px 2px;
+        transition: .2s linear;
+        &:hover {
+          color: @primary-active-hover-color;
+        }
+      }
+    }
+    .baseLine {
+      border-color: #efefef6b;
+      margin: 0 4px;
+    }
+    .menus {
+      background-color: @primary-background-color;
+    }
+  }
+
+}

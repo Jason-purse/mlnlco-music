@@ -1,4 +1,4 @@
-import MlnlcoAdminLayout from "./admin/MlnlcoAdminLayout";
+import Index from "../pages/admin";
 import MlnlcoUserLayout from "./user/MlnlcoUserLayout";
 
 type LayoutProps = {
@@ -11,6 +11,6 @@ type LayoutProps = {
  */
 export default function Layout({isAdmin}: LayoutProps) {
     return (
-        isAdmin ? <MlnlcoAdminLayout /> : <MlnlcoUserLayout />
+        isAdmin ? <Index /> : <MlnlcoUserLayout />
     )
 }

@@ -1,0 +1,30 @@
+@import url('../../../styles/commons.less');
+.statisticContainer {
+  background-color: @primary-background-color;
+  .item {
+    display: flex;
+    flex-direction: column;
+    header {
+      padding: 5px 2px;
+      background-color: white;
+      display: flex;
+      .name {
+        color: @second-primary-color;
+        flex-grow: 1;
+      }
+      .expUp {
+        margin-left: auto;
+        color: @exp-hover-color;
+      }
+      .expDown {
+        margin-left: auto;
+        color: @reverse-exp-hover-color;
+      }
+    }
+    footer {
+      height: 20px;
+      background-color: @primary-color;
+      color: white;
+    }
+  }
+}

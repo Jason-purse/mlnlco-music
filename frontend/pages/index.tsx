@@ -1,10 +1,16 @@
 import type {NextPage} from 'next'
-import MlnlcoAdminLayout from "../components/admin/MlnlcoAdminLayout";
+import Link from 'next/link'
 
 const Home: NextPage = () => {
     return (
-        <MlnlcoAdminLayout />
-
+       <div>
+           <Link href="admin">
+               <a>admin</a>
+           </Link>
+           <Link href="user">
+               <a>user</a>
+           </Link>
+       </div>
     )
 }
 
