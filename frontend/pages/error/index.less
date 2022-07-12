@@ -1,0 +1,26 @@
+/**
+ * 滑行
+ */
+@keyframes background-slide {
+  from {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+/**
+ * 重定向
+ */
+.error-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 800 40px 宋体;
+  background: linear-gradient(145deg, rgba(41, 132, 255, 0.41), rgba(254, 119, 78, 0.36), rgba(16, 16, 16, 0.4), rgba(168, 175, 189, 0.49),#ffffff);
+  background-size: 800%;
+  animation: background-slide  4s linear alternate-reverse infinite;
+  transition: .2s;
+}
